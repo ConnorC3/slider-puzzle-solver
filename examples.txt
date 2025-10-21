@@ -1,0 +1,17 @@
+---3x3---
+
+goal = "12345678_"
+p1 = "438_72615" # unsolvable
+p2 = "236574_18"
+p3 = "84_126735"
+p4 = "1234567_8"
+p5 = "13_457862"
+
+---4x4---
+
+goal = "ABCDEFGHIJKLMNO_"
+p1 = "BECDA_FGMJNKOILH"
+p2 = "AG_BECLDJFHKIMNO"
+p3 = "AFDHIECK_JLBMGNO"
+p4 = "BEAHGJICND_KMFOL"
+p5 = "BCDGIEH_JAFKMNOL"
