@@ -88,8 +88,7 @@ def reconstructPath(visited: Dict[str, str], start: str, goal: str) -> str:
 
     return " -> ".join(path)
 
-def solvePuzzleAStar(p: str, goal: str, 
-                     neighborFn: Callable=getNeighbors) -> str:
+def solvePuzzleAStar(p: str, goal: str, neighborFn: Callable=getNeighbors) -> str:
     pq = PriorityQueue()
     visited = {p:'$'}
     g = {p: 0}
@@ -114,7 +113,7 @@ def solvePuzzleAStar(p: str, goal: str,
                 f = currG + calcManhattanDist(nbr, goal)
                 pq.put((f, nbr))
 
-def solvePuzzleBFS(p, goal, neighborFn=getNeighbors):
+def solvePuzzleBFS(p: str, goal: str, neighborFn: Callable=getNeighbors) -> str:
     q = deque()
     q.append(p)
     visited = {p:'$'}
@@ -133,7 +132,7 @@ def solvePuzzleBFS(p, goal, neighborFn=getNeighbors):
 
 
 
-def benchmarkSolver(solver_fn, puzzles, goal):
+def benchmarkSolver(solver_fn: Callable, puzzles: List[str], goal: str) -> List[str]:
     results = []
     for i, puzzle in enumerate(puzzles):
         start_time = time.time()
