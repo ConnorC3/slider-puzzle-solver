@@ -129,9 +129,6 @@ def solvePuzzleBFS(p: str, goal: str, neighborFn: Callable=getNeighbors) -> str:
                 visited[nbr] = node # store parent as key to track path
                 q.append(nbr)
 
-
-
-
 def benchmarkSolver(solver_fn: Callable, puzzles: List[str], goal: str) -> List[str]:
     results = []
     for i, puzzle in enumerate(puzzles):
